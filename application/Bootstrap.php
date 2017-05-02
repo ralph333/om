@@ -22,8 +22,8 @@ class Bootstrap extends Yaf_Bootstrap_Abstract
         	$router = Yaf_Dispatcher::getInstance()->getRouter();
         }
         
-        public function _initPlugin(Yaf_Dispatcher $dispatcher) {
-        	/* register a plugin */
-        	$dispatcher->registerPlugin(new UserPermission());
-        }
+//         public function _initPlugin(Yaf_Dispatcher $dispatcher) {
+//         	/* register a plugin */
+//         	$dispatcher->registerPlugin(new UserPermission());
+//         }
 }
