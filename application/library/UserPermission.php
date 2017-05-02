@@ -5,7 +5,8 @@ class UserPermission extends Yaf_Plugin_Abstract
 	{
 		session_start();
 		$authList = array('index' => array('index'),
-		                  'login' => array('index', 'auth'),
+		                  'login' => array('index'),
+		                  'user'  => array('auth'),
 		                  'monitor' => array('server'), 
 		                  'release' => array('dns_api','release_api'),
 		                
