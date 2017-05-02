@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<title>YOM--Yoho Own Manager</title>
+<link rel="shortcut icon" href="/img/logo.ico" type="image/icon">
+
+<!-- Bootstrap core CSS -->
+<link href="/css/bootstrap.min.css" rel="stylesheet">
+<link href="/css/om.css" rel="stylesheet">
+<link href="/css/design.css" rel="stylesheet">
+<!-- Bootstrap core JS -->
+<script src="/js/jquery-1.11.1.min.js"></script>
+<script src="/js/bootstrap.min.js"></script>
+</head>
+
+<header>
+	<nav class="navbar navbar-default navbar-fixed-top" role="navigation">
+<div class="container-fluid">
+	<div class="navbar-header">
+		<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+			<span class="sr-only">Toggle navigation</span>
+			<span class="icon-bar"></span>
+			<span class="icon-bar"></span>
+			<span class="icon-bar"></span>
+		</button>
+
+		<div class="brand">
+			<a class="navbar-brand" href="index.php"><span>bootstrap sidebar</span></a>
+<!-- 			<a class="toogle pull-right"><i class="glyphicon glyphicon-chevron-left"></i></a> -->
+		</div>		
+	</div>
+</div>
+</nav></header>
+
+<div class="body slide">
+	<aside class="sidebar show perfectScrollbar">
+		<div id="solso-sidebar">
+	<div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
+		<div class="panel panel-default">
+			<div class="panel panel-default">
+				<div class="panel-heading" role="tab" id="heading1">
+					<h4 class="panel-title">
+						<a href="index.php" class="single-item">
+							<i class="fa fa-dashboard"></i> Dashboard 
+						</a>
+					</h4>
+				</div>
+			</div>
+		</div>
+		
+		<div class="panel panel-default">
+			<div class="panel-heading" role="tab" id="heading2">
+				<h4 class="panel-title">
+					<a data-toggle="collapse" data-parent="#accordion" href="#collapse2" aria-expanded="true" aria-controls="collapse2">
+						<i class="fa fa-bar-chart-o"></i> 工单
+						<i class="pull-right fa fa-caret-down"></i>
+					</a>
+				</h4>
+			</div>
+			
+			<div id="collapse2" class="panel-collapse collapse" role="tabpanel" aria-labelledby="heading2">
+				<div>
+					<a href="bar-chart.php" class="list-group-item">bar Chart</a>
+					<a href="pie-chart.php" class="list-group-item">pie Chart</a>
+					<a href="google-chart.php" class="list-group-item">google Chart</a>
+				</div>
+			</div>
+		</div>
+
+		<div class="panel panel-default">
+			<div class="panel-heading" role="tab" id="heading5">
+				<h4 class="panel-title">
+					<a data-toggle="collapse" data-parent="#accordion" href="#collapse5" aria-expanded="true" aria-controls="collapse5">
+						<i class="fa fa-desktop"></i> 发布管理
+						<i class="pull-right fa fa-caret-down"></i>
+					</a>
+				</h4>
+			</div>
+			
+			<div id="collapse5" class="panel-collapse collapse" role="tabpanel" aria-labelledby="heading5">
+				<div>
+					<a href="/release/releaseconfig" class="list-group-item">项目配置</a>
+					<a href="/release/releasecode" class="list-group-item">代码发布</a>
+				</div>
+			</div>
+		</div>
+
+				
+	</div>
+	
+</div>	</aside>
+
+	<div class="container-fluid left-border">
+	<div class="row">
+		<div class="col-md-12 col-lg-12">
+			<h1><i class="fa fa-home"></i> Dashboard</h1>
+			
+			<ol class="breadcrumb">
+				<li><a href="index.php">Home</a></li>
+				<li><a href="#">Core</a></li>
+				<li><a href="#">Library</a></li>
+				<li class="active">Dashboard</li>
+			</ol>	
+		</div>
+
+		<div class="col-sm-6 col-md-3">
+			<div class="widget widget-stats bg-green">
+				<div class="stats-icon stats-icon-lg"><i class="fa fa-users fa-fw"></i></div>
+				<div class="stats-title">clients</div>
+				<div class="stats-number">38</div>
+				<hr>
+				<div class="stats-desc">total number of clients</div>
+			</div> 	
+		</div> 	
+
+		<div class="col-sm-6 col-md-3">
+			<div class="widget widget-stats bg-blue">
+				<div class="stats-icon stats-icon-lg"><i class="fa fa-puzzle-piece fa-fw"></i></div>
+				<div class="stats-title">products</div>
+				<div class="stats-number">24</div>
+				<hr>
+				<div class="stats-desc">total number of products</div>
+			</div> 	
+		</div>  
+
+		<div class="col-sm-6 col-md-3">
+			<div class="widget widget-stats bg-purple">
+				<div class="stats-icon stats-icon-lg"><i class="fa fa-file-pdf-o fa-fw"></i></div>
+				<div class="stats-title">invoices</div>
+				<div class="stats-number">100</div>
+				<hr>
+				<div class="stats-desc">total number of invoices</div>
+			</div> 
+		</div> 		
+
+		<div class="col-sm-6 col-md-3">
+			<div class="widget widget-stats bg-grey">
+				<div class="stats-icon stats-icon-lg"><i class="fa fa-money fa-fw"></i></div>
+				<div class="stats-title">AMOUNT</div>
+				<div class="stats-number">3432.89 $</div>
+				<hr>
+				<div class="stats-desc">total value of amounts</div>
+			</div> 
+		</div> 
+
+		<div class="col-md-12">
+			<h2>Bootstrap Sidebar & Sidebar Accordion Menu</h2>
+			
+			<p>Bootstrap is one of the most loved CSS framework used by web developers, but it has some shortcomings and one of this is an sidebar and an sidebar accordion menu.</p>
+			<p>I try to create a sidebar for Bootstrap only with bootstrap elements so any developer who want to use this app doesn't need to load other components to have access to this feature.</p>
+			<p>Bootstrap sidebar use localStorage, new modern concept to keep secure information in browser, to store active link.</p>
+			
+			<h2>Sidebar Accordion Menu</h2>
+			
+			<p>This is the main feature which make the goal of this application, sidebar menu are based on bootstrap accordion.</p>
+			<p>When web page is loaded, accordion menu leaves the sub-menu open if the sub-menu contains the current page link, making it very convenient for users to navigate through other items in the sub-menu,
+			 but with my modification this issue is solved.	
+			</p>
+			
+			<p>Bootstrap Sidebar & Sidebar Accordion Menu come with 2 themes blue and orange, of course anyone can customize this from .css file</p>
+		</div>		
+			
+	</div>	
+	</div>	
+</div>
+</body>
+</html>
