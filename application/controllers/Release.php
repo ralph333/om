@@ -22,7 +22,9 @@ class ReleaseController extends Yaf_Controller_Abstract {
 	    $allowMethods = array('dns_api', 'release_api');
 	    $db_conn = new OmMysql ();
 	    $row = $db_conn->mysql_query ( "user_sql.get_user_group", array("username"=>$_SESSION['username']));
+	    echo 1;
 	    $group = mysql_result($row, 0);
+	    echo $group;
 	    if($group !== 'om' && !in_array($this->_request->getActionName(), $allowMethods))
 	    {
 	        echo '<script type="text/javascript">window.onload=function(){alert("无权访问");window.top.location.href="http://om.yoho.cn";}</script>';
