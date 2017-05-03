@@ -65,7 +65,7 @@ class UserController extends Yaf_Controller_Abstract {
 	    $row = $db_conn->mysql_query("user_sql.login_check", array('username'=> $_POST['username'], 'password'=>md5($_POST['password'])));
 	
 	    header("content-type:application/json");
-	    $result = mysql_num_rows($row);
+	    $result = mysqli_num_rows($row);
 	    if($result=="1")
 	    {
 	        //session_start();
