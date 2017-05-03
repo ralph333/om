@@ -26,6 +26,7 @@ class ReleaseController extends Yaf_Controller_Abstract {
 	    echo 1;
 	    $group = mysql_result($row, 0);
 	    echo $group;
+	    echo 2;
 	    exit;
 	    if($group !== 'om' && !in_array($this->_request->getActionName(), $allowMethods))
 	    {
