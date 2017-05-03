@@ -348,3 +348,12 @@
 	}
 /* === END SOLUTII SOFT === */
 .pull-right{float:right}.pull-left{float:left}
+	
+	
+/* === 自定义css */
+/* 表格 */
+	.om_table_th .om_table_td {
+		width: 15%;
+		border-left-width: 0px;
+		border-right-width: 0px;
+	}

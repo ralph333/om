@@ -67,12 +67,12 @@ class ReleaseController extends Yaf_Controller_Abstract {
 	            $region = '测试环境';
 	        }
 	        $html .= '<tr>';
-	        $html .= '<td class="acc_browse_table_acc_server">' . $result ['project_name'] . '</td>';
-	        $html .= '<td class="acc_browse_table_acc_server">' . $region . '</td>';
-	        $html .= '<td class="acc_browse_table_time">' . $result ['project_language'] . '</td>';
-	        $html .= '<td class="acc_browse_table_time">' . $result ['project_repository'] . ':' . $result ['project_repository_url'] . '</td>';
-	        $html .= '<td class="acc_browse_table_level">' . $result ['project_code_path'] . '</td>';
-	        $html .= '<td class="acc_info">' . $result ['project_ip'] . '</td>';
+	        $html .= '<td class="om_table_td">' . $result ['project_name'] . '</td>';
+	        $html .= '<td class="om_table_td">' . $region . '</td>';
+	        $html .= '<td class="om_table_td">' . $result ['project_language'] . '</td>';
+	        $html .= '<td class="om_table_td">' . $result ['project_repository'] . ':' . $result ['project_repository_url'] . '</td>';
+	        $html .= '<td class="om_table_td">' . $result ['project_code_path'] . '</td>';
+	        $html .= '<td class="om_table_td">' . $result ['project_ip'] . '</td>';
 	    }
 	    $this->getView ()->assign ( "html", $html );
 	    /*
