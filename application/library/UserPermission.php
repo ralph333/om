@@ -41,6 +41,7 @@ class UserPermission extends Yaf_Plugin_Abstract
 				$db_conn = new OmMysql ();
 				$row = $db_conn->mysqli_query("login_sql.password_check", array('username'=> $_SESSION['username']));
 				$result = mysql_fetch_array($row);
+				echo $result;
 				if($result['confirm_password'] == 0)
 				{
 					header("Location: /user/password");
