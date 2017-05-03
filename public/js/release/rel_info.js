@@ -34,7 +34,7 @@
 					 + '<div class="form-group">'
 					 + '<label for="desc">选择执行动作</label>'
 					 + '<div class="form-group">'
-					 + '<select name="rel_action" id="rel_action" class="rel_record_form" onchange="getReleaseAction(this.value)">'
+					 + '<select name="rel_action" id="rel_action" class="om_input" onchange="getReleaseAction(this.value)">'
 					 + '<option value="choose">请选择</option>'
 					 + '<option value="release">发布</option>'
 					 + '<option value="rollback">回滚</option>'
