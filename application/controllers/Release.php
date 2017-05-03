@@ -25,6 +25,7 @@ class ReleaseController extends Yaf_Controller_Abstract {
 	    $group = mysqli_fetch_row($row);
 	    print_r($group);
 	    echo $group['usergroup'];
+	    exit;
 	    if($group['usergroup'] !== 'om' && !in_array($this->_request->getActionName(), $allowMethods))
 	    {
 	        echo '<script type="text/javascript">window.onload=function(){alert("无权访问");window.top.location.href="http://om.sanqimei.com";}</script>';
