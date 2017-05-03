@@ -31,7 +31,15 @@
 		<div class="brand">
 			<a class="navbar-brand" href="index.php"><span>三七美 OM</span></a>
 <!-- 			<a class="toogle pull-right"><i class="glyphicon glyphicon-chevron-left"></i></a> -->
-		</div>		
+		</div>
+		<div class="navbar-collapse collapse">
+         		<ul class="nav navbar-nav navbar-right">
+                	<li id="nav_login">
+              			<a><?php echo $_SESSION['username']; ?></a>
+            		</li>
+                	<li id="nav_signup"><a href="/login/logout">Logout</a></li>
+          		</ul>
+			</div>		
 	</div>
 </div>
 </nav></header>
