@@ -43,6 +43,7 @@ class UserPermission extends Yaf_Plugin_Abstract
 				
 				$result = mysql_fetch_array($row);
 				print_r($result);
+				exit;
 				if($result['confirm_password'] == 0)
 				{
 					header("Location: /user/password");
