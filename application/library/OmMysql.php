@@ -27,7 +27,7 @@ class OmMysql
 			$patterns[$key] = sprintf("/:%s/", $key);
 		}
 		$sql = preg_replace($patterns, $params, $sql);
-		//echo $sql;
+		echo $sql;
 		return mysqli_query($this->conn, $sql);
 	}
 
