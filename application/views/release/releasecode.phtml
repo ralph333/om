@@ -1,0 +1,69 @@
+<div>
+	<ul class="nav nav-tabs" role="tablist">
+		<li role="presentation" class="active"><a href="#rel_release"
+			role="tab" data-toggle="tab">Release</a></li>
+		<li role="presentation"><a href="#rel_browse" role="tab"
+			data-toggle="tab">Browse</a></li>
+	</ul>
+
+	<!-- Tab panes -->
+	<div class="tab-content">
+
+		<div role="tabpanel" class="tab-pane active" id="rel_release">
+			<div class="form-group" style="margin-top: 20px;">
+				<label for="desc">选择代码仓库类型</label>
+				<div class="form-group">
+					<a href="/release/release_git"> <img src="/img/git.png"
+						class="img-thumbnail" style="width: 210px; height: 100px;"></a>
+				</div>
+				<div class="form-group">
+					<a href="/release/release_svn"><img src="/img/svn.png"
+						class="img-thumbnail"></a>
+				</div>
+			</div>
+		</div>
+
+		<div role="tabpanel" class="tab-pane" id="rel_browse">
+			<table class="table table-striped" style="width: 100%;">
+				<thead>
+					<tr>
+						<th class="rel_browse_table">Rel App</th>
+						<th class="rel_browse_table">Releaser</th>
+						<th class="rel_browse_table">Rel Action</th>
+						<th class="rel_browse_table">Time</th>
+					</tr>
+				</thead>
+				<tbody>
+					<?php
+					echo $html;
+					?>
+				</tbody>
+			</table>
+			<?php echo $paging;?>
+		</div>
+		
+		<div class="modal fade bs-example-modal-lg" tabindex="-1"
+			role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
+			<div class="modal-dialog modal-lg">
+				<div class="modal-content">
+					<div class="modal-header">
+						<h4 class="modal-title">Release Detail:</h4>
+					</div>
+					<div id="rel_detail" class="modal-body" style="word-wrap: break-word"></div>
+					<div class="modal-header"></div>
+					<div class="modal-header">
+						<h4 class="modal-title">Release Checked Result:</h4>
+					</div>
+					<div id="rel_check_result" class="modal-body" style="word-wrap: break-word"></div>
+					<div class="modal-footer">
+						<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+					</div>
+				</div>
+			</div>
+		</div>
+		
+	</div>
+</div>
+
+<script type="text/javascript" src="/js/release/release-detail.js" charset="UTF-8"></script>
+
