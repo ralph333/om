@@ -204,8 +204,7 @@ class ReleaseController extends Yaf_Controller_Abstract {
 	    $row = $db_conn->mysql_query("release_sql.get_project", array());
 	    header("content-type:application/json");
 	    $result_array = array();
-	    $res = array();
-	    while($result = mysql_fetch_row($row))
+	    while($result = mysqli_fetch_row($row))
 	    {
 	        //$res = explode(',', $result);
 	        $result_array[] = $result;
