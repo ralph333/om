@@ -27,7 +27,7 @@ class ReleaseController extends Yaf_Controller_Abstract {
 	    echo $group['usergroup'];
 	    if($group['usergroup'] !== 'om' && !in_array($this->_request->getActionName(), $allowMethods))
 	    {
-	        echo '<script type="text/javascript">window.onload=function(){alert("无权访问");window.top.location.href="http://om.yoho.cn";}</script>';
+	        echo '<script type="text/javascript">window.onload=function(){alert("无权访问");window.top.location.href="http://om.sanqimei.com";}</script>';
 	        exit;
 	    }
 		$this->getView()->setLayout('Consolemain');
