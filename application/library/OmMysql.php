@@ -5,9 +5,9 @@ class OmMysql
 	public  function __construct()
 	{
 		$this->conn = mysqli_connect(Yaf_Application::app()->getConfig()->application->mysql->host,
-									Yaf_Application::app()->getConfig()->application->mysql->username,
-									Yaf_Application::app()->getConfig()->application->mysql->password,
-		                            Yaf_Application::app()->getConfig()->application->mysql->database
+									 Yaf_Application::app()->getConfig()->application->mysql->username,
+									 Yaf_Application::app()->getConfig()->application->mysql->password,
+		                             Yaf_Application::app()->getConfig()->application->mysql->database
 									);
 		if (!$this->conn) {
 			die(mysql_error());
