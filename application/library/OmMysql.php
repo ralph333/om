@@ -11,6 +11,7 @@ class OmMysql
 		if (!$this->conn) {
 			die(mysql_error());
 		}
+		mysql_select_db("om", $this->conn);
 	}
 
 	public function mysql_query($router, $params)
