@@ -223,7 +223,7 @@ class ReleaseController extends Yaf_Controller_Abstract {
 	    $db_conn = new OmMysql ();
 	    $row = $db_conn->mysql_query("release_sql.get_project_info", array("project_name"=>$project_name, "project_region"=>$project_region));
 	    header("content-type:application/json");
-	    $result = mysql_fetch_row($row);
+	    $result = mysqli_fetch_row($row);
 	    echo (json_encode($result));
 	    exit;
 	
