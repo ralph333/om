@@ -4,14 +4,14 @@ class OmMysql
 	private  $conn;
 	public  function __construct()
 	{
-		$this->conn = mysql_connect(Yaf_Application::app()->getConfig()->application->mysql->host,
+		$this->conn = mysqli_connect(Yaf_Application::app()->getConfig()->application->mysql->host,
 									Yaf_Application::app()->getConfig()->application->mysql->username,
-									Yaf_Application::app()->getConfig()->application->mysql->password
+									Yaf_Application::app()->getConfig()->application->mysql->password,
+		                            Yaf_Application::app()->getConfig()->application->mysql->database
 									);
 		if (!$this->conn) {
 			die(mysql_error());
 		}
-		mysql_select_db("om", $this->conn);
 	}
 
 	public function mysql_query($router, $params)
@@ -28,7 +28,7 @@ class OmMysql
 		}
 		$sql = preg_replace($patterns, $params, $sql);
 		//echo $sql;
-		return mysql_query($this->conn, $sql);
+		return mysqli_query($this->conn, $sql);
 	}
 
 	public function mysql_num_rows($row)
