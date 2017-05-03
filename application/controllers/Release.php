@@ -45,7 +45,7 @@ class ReleaseController extends Yaf_Controller_Abstract {
 	    $row = $db_conn->mysql_query ( "release_sql.release_config_browse", array());
 	    $result_array = array ();
 	    $html = '';
-	    while ( $result = mysql_fetch_array ( $row ) ) {
+	    while ( $result = mysqli_fetch_array ( $row ) ) {
 	        if($result ['project_region'] == 'aliyun')
 	        {
 	            $region = '阿里云';
