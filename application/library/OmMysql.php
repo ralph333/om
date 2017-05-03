@@ -4,7 +4,7 @@ class OmMysql
 	private  $conn;
 	public  function __construct()
 	{
-		$this->conn = mysqli_connect(Yaf_Application::app()->getConfig()->application->mysql->host,
+		$this->conn = mysql_connect(Yaf_Application::app()->getConfig()->application->mysql->host,
 									 Yaf_Application::app()->getConfig()->application->mysql->username,
 									 Yaf_Application::app()->getConfig()->application->mysql->password,
 		                             Yaf_Application::app()->getConfig()->application->mysql->database
@@ -14,7 +14,7 @@ class OmMysql
 		}
 	}
 
-	public function mysqli_query($router, $params)
+	public function mysql_query($router, $params)
 	{
 		$arr = explode('.', $router);
 		$project = $arr[0];
@@ -28,7 +28,7 @@ class OmMysql
 		}
 		$sql = preg_replace($patterns, $params, $sql);
 		//echo $sql;
-		return mysqli_query($this->conn, $sql);
+		return mysql_query($this->conn, $sql);
 	}
 
 	public function mysql_num_rows($row)

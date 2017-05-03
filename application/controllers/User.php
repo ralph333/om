@@ -62,10 +62,10 @@ class UserController extends Yaf_Controller_Abstract {
 	public function authAction()
 	{
 	    $db_conn = new OmMysql ();
-	    $row = $db_conn->mysqli_query("user_sql.login_check", array('username'=> $_POST['username'], 'password'=>md5($_POST['password'])));
+	    $row = $db_conn->mysql_query("user_sql.login_check", array('username'=> $_POST['username'], 'password'=>md5($_POST['password'])));
 	
 	    header("content-type:application/json");
-	    $result = mysqli_num_rows($row);
+	    $result = mysql_num_rows($row);
 	    if($result=="1")
 	    {
 	        //session_start();
@@ -85,7 +85,7 @@ class UserController extends Yaf_Controller_Abstract {
 				exit;
 			}
 			$db_conn = new OmMysql ();
-			$row = $db_conn->mysqli_query("login_sql.modify_password", array('username'=> $_SESSION['username'],'password'=>md5($_REQUEST['passwd1'])));
+			$row = $db_conn->mysql_query("login_sql.modify_password", array('username'=> $_SESSION['username'],'password'=>md5($_REQUEST['passwd1'])));
 			if(!$row)
 			{
 				die('Error: ' . mysql_error());
