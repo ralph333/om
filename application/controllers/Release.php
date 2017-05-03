@@ -23,10 +23,8 @@ class ReleaseController extends Yaf_Controller_Abstract {
 	    $db_conn = new OmMysql ();
 	    $row = $db_conn->mysql_query ( "user_sql.get_user_group", array("username"=>$_SESSION['username']));
 	    $group = mysqli_fetch_row($row);
-	    print_r($group);
-	    echo $group['usergroup'];
-	    exit;
-	    if($group['usergroup'] !== 'om' && !in_array($this->_request->getActionName(), $allowMethods))
+
+	    if($group['0'] !== 'om' && !in_array($this->_request->getActionName(), $allowMethods))
 	    {
 	        echo '<script type="text/javascript">window.onload=function(){alert("无权访问");window.top.location.href="http://om.sanqimei.com";}</script>';
 	        exit;
