@@ -43,9 +43,8 @@ class UserPermission extends Yaf_Plugin_Abstract
 				$row = $db_conn->mysql_query("login_sql.password_check", array('username'=> $_SESSION['username']));
 				
 				echo 1;
-				echo $row;
 				echo 2;
-				$result = mysql_fetch_array($row);
+				$result = mysqli_fetch_array($row);
 				print_r($result);
 				echo 3;
 				exit;
