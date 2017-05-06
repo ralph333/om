@@ -86,53 +86,7 @@ var onKST = openZoosUrl = function(text){
 		ksOpenLink();
 	}
 };
-document.writeln("<link rel=\"stylesheet\" href=\"/swtimg/css/swtStyle.css\" />");
-document.writeln("<script src=\"/js/jquery.easing.1.3.js\"></script>");
 
-document.writeln("<div class=\"njCenter\" id=\"njCenter\">");
-document.writeln("<a id=\"cenClose\" class=\"cenClose swtIcon absolute iBlock\" title=\"关闭\" target=\"_self\" href=\"javascript:void(0)\"></a>");
-document.writeln("	<div class=\"njswtBg relative\">");
-document.writeln("    	<div class=\"models absolute\" id=\"models\">");
-document.writeln("        	<div class=\"model\" id=\"model3\"></div>");
-document.writeln("          <div class=\"model\" id=\"model2\"></div>");
-document.writeln("          <div class=\"model fadein\" id=\"model1\"></div>");
-document.writeln("        </div>");
-document.writeln("    <div class=\"njswtTxt\">");
-document.writeln("    	<div class=\"tellFormcen\">");
-document.writeln("        <input id=\"tell_numcen\" class=\"tell_numcen\" type=\"text\" value=\"输入您的电话号码\" onfocus=\"value=\'\'\" onblur=\"if(!value)value=defaultValue\"></input>");
-document.writeln("        <a id=\"subCen_btn\" class=\"subCen_btn swtAni\" href=\"javascript:void(0)\">免费回电</a>");
-document.writeln("    	</div>");
-document.writeln("    </div>");
-document.writeln("    </div>");
-/*document.writeln("    <div class=\"njswtTxt\">");
-document.writeln("    	<div class=\"tellFormcen\">");
-document.writeln("        <input id=\"tell_numcen\" class=\"tell_numcen\" type=\"text\" value=\"输入您的电话号码\" onfocus=\"value=\'\'\" onblur=\"if(!value)value=defaultValue\"></input>");
-document.writeln("        <a id=\"subCen_btn\" class=\"subCen_btn swtAni\" href=\"javascript:void(0)\"><em class=\"iBlock swtIcon\"></em>免费回电</a>");
-document.writeln("    	</div>");
-document.writeln("        <p>我们将立即回电，该通话对您免费，并严格保密，请放心接听！手机请直接输入，座机前加区号。</p>");
-document.writeln("    </div>");*/
-document.writeln("    <div class=\"njTextarea\">");
-document.writeln("    	<div class=\"njChatBox clearfix\">");
-document.writeln("        <textarea class=\"textarea\">在此输入可直接对话,快速咨询...</textarea>");
-document.writeln("        <a href=\"javascript:void(0)\" class=\"KSTsendTxtBtn swtAni\"><p>发送<br/><small>Enter</small></p></a>");
-document.writeln("        </div>");
-document.writeln("    </div>");
-document.writeln("</div>");
-
-document.writeln("<div class=\"swtBottom\">");
-document.writeln("	<div class=\"title\">");
-document.writeln("    	<span>快速咨询</span>");
-document.writeln("        <a href=\"javascript:void(0)\" class=\"closeBtn\"></a>");
-document.writeln("    </div>");
-document.writeln("    <div class=\"chatBox\">");
-document.writeln("    	<div class=\"welcomeWord\">您好，请问有什么可以帮助您？");
-document.writeln("</div>");
-document.writeln("    </div>");
-document.writeln("    <div class=\"chatTxt clearfix\">");
-document.writeln("    	<div class=\"txt fl\"><textarea  placeholder=\"在此输入可直接对话\"></textarea></div>");
-document.writeln("        <a href=\"javascript:void(0)\"  class=\"txtSubmit fl\" target=\"_self\"><span>发送</span><span>Enter</span></a>");
-document.writeln("    </div>");
-document.writeln("</div>");
 
 function tabModels(){
 	function fadeIn(e) {e.className = "model fadein"	};
