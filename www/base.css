@@ -1,0 +1,48 @@
+@charset "gb2312";
+/* CSS Document */
+body,html{min-width:1100px;max-width:100%;margin:0 auto;-moz-transition:all 0.3s ease-out 0s;-webkit-transition:all 0.3s ease-out 0s;transition:all 0.3s ease-out 0s;}
+/*鍏ㄧ綉閫氱敤*/
+body,h1,h2,h3,h4,h5,h6,hr,blockquote,dl,dd,ul,ol,pre,form,fieldset,legend,button,input,textarea,th,td{margin:0;padding:0;font-weight: 400; }
+body{font-size:14px;font-style:normal;background:#FFFFFF;min-width: 1180px;font-family:"微软雅黑";}
+img{border:0;}
+ul{display:table;}
+ul,li{list-style:none;padding:0;margin:0;}
+.font_weight{font-weight:normal;color:#333333;}
+a{color: #FFFFFF;}
+a,a:hover{text-decoration:none;}
+._wek{-moz-transition:all 1.0s;-ms-transition:all 1.0s;-webkit-transition:all 1.0s;transition:all 1.0s;}
+
+.f12{font-size:12px}
+.f13{font-size:13px}
+.f14{font-size:14px}
+.f16{font-size:16px}
+.f18{font-size:18px}
+.f20{font-size:20px}
+.f22{font-size:22px}
+.f24{font-size:24px}
+.f26{font-size:26px}
+.f30{font-size:30px}
+.f33{font-size:33px;}
+.f32{font-size:32px;}
+.f36{font-size:36px}
+.f40{font-size:40px}
+.f84{font-size:84px}
+
+
+.fl{float:left;}
+.fr{float:right;}
+
+ .clearfix:after{content:'.';display:block;height:0;clear:both;visibility:hidden;}
+ .clearfix{zoom:1;}
+ *html .clearfix{height:1%;}.vm{vertical-align:center;}
+
+ .hide{display:none}
+ .overhide{overflow:hidden}
+
+.mg_l{float:left;margin-left:0;}
+.mg_r{float:right;margin-right:0;}
+
+
+/*瀹氫綅*/
+.relative{position: relative;}
+.absolute{position: absolute;}
