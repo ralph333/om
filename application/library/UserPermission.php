@@ -9,7 +9,7 @@ class UserPermission extends Yaf_Plugin_Abstract
 		                  'user'  => array('auth'),
 		                  'monitor' => array('server'), 
 		                  'release' => array('dns_api','release_api'),
-		                
+		                  '.well-known' => array('pki-validation')
 		                  );
 		$controllerName =  strtolower($request->getControllerName());
 		$actionName = strtolower($request->getActionName());
