@@ -19,6 +19,17 @@ class DocController extends Yaf_Controller_Abstract {
 	    echo $_POST['doc_user'];
 	    echo $_POST['doc_password'];
 	    echo $_POST['doc_group'];
+	    $db_conn = new OmMysql ();
+	    $row = $db_conn->mysql_query ( "doc_sql.doc_record", array("desc"=>$_POST['doc_decs'], 
+	                                                               "user"=>$_POST['doc_user'], 
+	                                                               "password"=>$_POST['doc_password'], 
+	                                                               "group"=>$_POST['doc_group']
+	                                                              ));
+	    if(!$row)
+	    {
+	        die('Error: ' . mysql_error());
+	    }
+	    
 	
 	}
 }
