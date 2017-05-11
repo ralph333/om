@@ -42,5 +42,19 @@ class DocController extends Yaf_Controller_Abstract {
 	    exit;
 	
 	}
+	
+	public function getdescAction() {
+	    $db_conn = new OmMysql ();
+	
+	    $row = $db_conn->mysql_query("doc_sql.get_desc", array());
+	    header("content-type:application/json");
+	    $result_array = array();
+	    while($result = mysqli_fetch_row($row))
+	    {
+	        $result_array[] = $result;
+	    }
+	    echo json_encode($result_array);
+	    return false;
+	}
 }
 ?>
