@@ -30,5 +30,6 @@ $(document).ready(function()
             displayKey: 'value',
             source: substringMatcher(desc)
         });
+        alert(value);
 	});
 });
