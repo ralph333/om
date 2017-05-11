@@ -39,7 +39,7 @@ class DocController extends Yaf_Controller_Abstract {
 	    
 	    if ($_GET['action']== "update")
 	    {
-	        $modify[] = array();
+	        $modify = array();
 	        if(!empty($_POST['doc_monify_user']))
 	        {
 	            $modify['user'] = $_POST['doc_monify_user'];
