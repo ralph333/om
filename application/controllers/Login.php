@@ -8,19 +8,19 @@ class LoginController extends Yaf_Controller_Abstract {
 		
 	}
 	
-// 	public function logoutAction()
-// 	{
-// 		session_start ();
-// 		session_destroy();
-// 		$_SESSION = array();
-// 		//if (isset($_SESSION['uid']) || isset($_SESSION['username']) || isset($_SESSION['usergroup'])) {
-// 			//unset($_SESSION['uid']);
-// 			unset($_SESSION['username']);
-// 			//unset($_SESSION['usergroup']);
-// 		//}
+	public function logoutAction()
+	{
+		session_start ();
+		session_destroy();
+		$_SESSION = array();
+		//if (isset($_SESSION['uid']) || isset($_SESSION['username']) || isset($_SESSION['usergroup'])) {
+			//unset($_SESSION['uid']);
+			unset($_SESSION['username']);
+			//unset($_SESSION['usergroup']);
+		//}
 		
-// 		header("location: /login");
-// 		return false;
-// 	}
+		header("location: /login");
+		return false;
+	}
 }
 ?>
