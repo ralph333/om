@@ -20,7 +20,7 @@ class DocController extends Yaf_Controller_Abstract {
 	        echo "new";
 	    }
 	    
-	    if ($_GET['action']= "update")
+	    if ($_GET['action']== "update")
 	    {
 	        echo "update";
 	    }
