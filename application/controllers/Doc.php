@@ -19,6 +19,17 @@ class DocController extends Yaf_Controller_Abstract {
 	    echo $_POST['doc_user'];
 	    echo $_POST['doc_password'];
 	    echo $_POST['doc_group'];
+	    if (empty($_POST['doc_decs']) ||
+	        empty($_POST['doc_user']) ||
+	        empty($_POST['doc_password']) ||
+	        empty($_POST['doc_group']))
+	    {
+	        echo '<script type="text/javascript">window.onload=function(){alert("所有选项必填。");window.top.location.href="/doc/record";}</script>';
+	        exit;
+	         
+	    }
+	    
+	    
 	    $db_conn = new OmMysql ();
 	    $row = $db_conn->mysql_query ( "doc_sql.doc_record", array("description"=>$_POST['doc_decs'], 
 	                                                               "username"=>$_POST['doc_user'], 
