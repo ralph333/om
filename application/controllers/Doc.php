@@ -15,10 +15,6 @@ class DocController extends Yaf_Controller_Abstract {
 	
 	public function recordAction()
 	{
-	    echo $_POST['doc_decs'];
-	    echo $_POST['doc_user'];
-	    echo $_POST['doc_password'];
-	    echo $_POST['doc_group'];
 	    if (empty($_POST['doc_decs']) ||
 	        empty($_POST['doc_user']) ||
 	        empty($_POST['doc_password']) ||
