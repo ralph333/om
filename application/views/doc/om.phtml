@@ -11,7 +11,7 @@
 	<!-- Tab panes -->
 	<div class="tab-content">
 
-		<div role="tabpanel" class="tab-pane active" id="rel_conf_view">
+		<div role="tabpanel" class="tab-pane active" id="doc_om_view">
 			<table class="table table-striped" style="width: 100%;">
 				<thead>
 					<tr>
@@ -32,60 +32,36 @@
 		</div>
 
 		<div role="tabpanel" class="tab-pane" id="doc_om_record">
-			<form role="form" style="margin-top: 20px;" action="/release/releaseconfig?action=submit" method="post">
+			<form role="form" style="margin-top: 20px;" action="#/release/releaseconfig?action=submit" method="post">
 				<div class="form-group">
-					<label for="desc">项目名称</label>
+					<label for="desc">描述</label>
 					<div class="form-group">
-						<input type="text" name="rel_conf_project" class="om_input" placeholder=""> 
+						<input type="text" name="doc_decs" class="om_input" placeholder=""> 
 					</div>
 				</div>
+				
 				<div class="form-group">
-					<label for="desc">服务器位置</label>
+					<label for="desc">用户名</label>
 					<div class="form-group">
-						<select name="rel_conf_project_region" id="rel_conf_project_region" class="om_input" style="width: 286px;">
-					       <option value="aliyun">阿里云</option>
-					       <option value="aws">亚马逊AWS</option>
-					       <option value="tencent">腾讯云</option>
-					       <option value="huidu">阿里云-灰度环境</option>
-					       <option value="test">测试环境</option>
-					   </select> 
-					</div>
-				</div>
-				<div class="form-group">
-					<label for="desc">项目开发语言</label>
-					<div class="form-group">
-					   <select name="rel_conf_project_language" id="rel_conf_project_language" class="om_input" onchange="getLanguage(this.value)">
-					       <option value="php">php</option>
-					       <option value="java">java</option>
-					   </select>
+					   <input type="text" name="doc_user" class="om_input" placeholder="">
 				    </div>    
 				</div>
-				<div class="form-group" id="nginx_info">
-					   
-				</div>
-				<div class="form-group" id="zookeeper">
-					   
-				</div>
+>
 				<div class="form-group">
-					<label for="desc">项目代码仓库地址</label>
+					<label for="desc">密码</label>
 					<div class="form-group">
-					   <select name="rel_conf_project_repository" id="rel_conf_project_repository" class="om_input" style="width: 76px;">
-					       <option value="git">git</option>
-					       <option value="svn">svn</option>
-					   </select>
-					   <input type="text" name="rel_conf_project_repository_url" class="om_input" placeholder="代码仓库地址"> 
+						<input type="text" name="doc_password" class="om_input" placeholder=""> 
 					</div>
 				</div>
+				
 				<div class="form-group">
-					<label for="desc">生产环境服务器代码存放位置</label>
+					<label for="desc">类别</label>
 					<div class="form-group">
-						<input type="text" name="rel_conf_project_code_path" class="om_input" placeholder="生产环境服务器代码绝对路径"> 
-					</div>
-				</div>
-				<div class="form-group">
-					<label for="desc">生产环境服务器ip</label>
-					<div class="form-group">
-						<textarea type="text" name="rel_conf_project_ip" style="margin: 0px; width: 286px; height: 214px;" class="om_input" placeholder="每行填写一个ip。IDC和vpc内的机器，请写内网ip。阿里云请写公网ip。"></textarea>
+						<select name="doc_group" id="doc_group" class="om_input" style="width: 286px;">
+					       <option value="platform">平台</option>
+					       <option value="system">系统</option>
+					       <option value="app">应用</option>
+					   </select> 
 					</div>
 				</div>
 				<div class="form-group">
