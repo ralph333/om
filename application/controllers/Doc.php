@@ -27,7 +27,7 @@ class DocController extends Yaf_Controller_Abstract {
 	                                                              ));
 	    if(!$row)
 	    {
-	        die('Error: ' . mysql_error());
+	        die('Error: ' . mysqli_error());
 	    }
 	    
 	
