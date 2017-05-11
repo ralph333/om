@@ -15,7 +15,15 @@ class DocController extends Yaf_Controller_Abstract {
 	
 	public function recordAction()
 	{
-	    echo $_GET['action'];
+	    if (empty($_GET['action']))
+	    {
+	        echo "new";
+	    }
+	    
+	    if ($_GET['action']= "update")
+	    {
+	        echo "update";
+	    }
 	    exit;
 	    if (empty($_POST['doc_decs']) ||
 	        empty($_POST['doc_user']) ||
