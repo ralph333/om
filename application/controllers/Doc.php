@@ -24,7 +24,7 @@ class DocController extends Yaf_Controller_Abstract {
 	        empty($_POST['doc_password']) ||
 	        empty($_POST['doc_group']))
 	    {
-	        echo '<script type="text/javascript">window.onload=function(){alert("所有选项必填。");window.top.location.href="/doc/record";}</script>';
+	        echo '<script type="text/javascript">window.onload=function(){alert("所有选项必填。");window.top.location.href="/doc/om";}</script>';
 	        exit;
 	         
 	    }
