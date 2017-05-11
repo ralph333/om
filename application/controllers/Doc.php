@@ -40,7 +40,8 @@ class DocController extends Yaf_Controller_Abstract {
 	    {
 	        die('Error: ' . mysqli_error($db_conn));
 	    }
-	    
+	    echo '<script type="text/javascript">window.onload=function(){alert("添加成功");window.top.location.href="/doc/om";}</script>';
+	    exit;
 	
 	}
 }
